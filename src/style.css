@@ -1,0 +1,22 @@
+
+body {
+    margin: 0;
+    width: 100%;
+}
+.header {
+    height: 70px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 50em;
+   background-color: rgb(98, 98, 155);
+
+}
+
+.title {
+    font-size: 25px;
+}
+
+.project {
+    font-size: 25px;
+}

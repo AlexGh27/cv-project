@@ -1,5 +1,9 @@
 import React, {Component} from "react";
-import './App.css';
+import Header from './Header';
+import General from './General';
+import Educational from './Educational';
+import Experience from './Experience';
+
 
 export default class App extends Component {
   constructor() {
@@ -12,9 +16,17 @@ export default class App extends Component {
 
   render() {
     return(
-      <div className = "headerMessage">
-          Create your CV!
+      <div>
+        <div className = "header">
+          <Header/>
+          
+        </div>
+
+        <div className = "general">
+          <General/>
+        </div>
       </div>
+      
     )
   }
 }
