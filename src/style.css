@@ -4,19 +4,47 @@ body {
     width: 100%;
 }
 .header {
-    height: 70px;
+   height: 70px;
    display: flex;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
-   gap: 50em;
+   gap: 70vw;
    background-color: rgb(98, 98, 155);
 
 }
 
 .title {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .project {
+    font-size: 30px;
+}
+
+.field-title {
     font-size: 25px;
+}
+
+input {
+    height: 50px;
+    width: 300px;
+}
+
+.form {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1vw;
+}
+
+#firstRow {
+    display: flex;
+    gap: 1vw;
+}
+
+#secondRow {
+    display: flex;
+    gap: 1vw;
 }
