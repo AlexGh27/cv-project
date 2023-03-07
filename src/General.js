@@ -8,17 +8,17 @@ export default class General extends Component {
                 <div className="field-title">General Information</div>
                 <form className="form">
 
-                    <div id="firstRow">
+                    
                         <input id="firstName" type="text" placeholder="First Name" required/>
                     
                         <input id="lastName" type="text" placeholder="Last Name" required/>
-                    </div>
                     
-                    <div id="secondRow">
+                    
+                    
                         <input id="email" type="email" placeholder="Email Address"/>
 
                         <input id="tel" type="text" placeholder="Phone Number"/>
-                    </div>
+                   
                     
                 </form>
             </div>

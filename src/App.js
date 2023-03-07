@@ -17,13 +17,20 @@ export default class App extends Component {
 
   render() {
     return(
-      <div>
-        <Header/>
-        
-        <General/>
+      <div className="app">
 
-        <Educational/>
-        
+         <Header/>
+
+         <div className="left-panel">
+           <General/>
+
+           <Educational/>
+
+           <Experience/>
+         </div>
+
+         <div className="right-panel"></div>
+          
       </div>
       
     )
