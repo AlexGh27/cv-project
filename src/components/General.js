@@ -19,7 +19,8 @@ export default class General extends Component {
 
                         <input id="tel" type="text" placeholder="Phone Number"/>
                    
-                    
+                        <input id="city" type="text" placeholder="City"/>
+
                 </form>
             </div>
         )

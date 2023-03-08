@@ -3,8 +3,8 @@ import Header from './Header';
 import General from './General';
 import Educational from './Educational';
 import Experience from './Experience';
-import './style.css';
-
+import Overview from './Overview';
+import Footer from './Footer';
 
 export default class App extends Component {
   constructor() {
@@ -29,8 +29,12 @@ export default class App extends Component {
            <Experience/>
          </div>
 
-         <div className="right-panel"></div>
-          
+         <div className="right-panel">
+            <Overview/>
+         </div>
+
+         <Footer/>
+
       </div>
       
     )

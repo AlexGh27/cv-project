@@ -5,7 +5,7 @@ export default class Experience extends Component {
     render() {
         return(
             <div className="experience">
-                <div className="field-title">Educational background</div>
+                <div className="field-title">Work Experience</div>
 
                 <form className="form">
                     <input type="text" placeholder="Position"/>
