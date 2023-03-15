@@ -21,6 +21,8 @@ export default class General extends Component {
                    
                         <input id="city" type="text" placeholder="City"/>
 
+                        <input id="description" type="text" placeholder="Short Description"/>
+
                 </form>
             </div>
         )
