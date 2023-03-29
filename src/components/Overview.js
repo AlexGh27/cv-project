@@ -24,14 +24,33 @@ export default class Overview extends Component {
                         id est laborum.
                         </div>
                     </div>
-                    <div id="experience-overview">
-                        <div className="overview-title">Work Experience</div>
-                        <div id="experience-card">
-                            <div id="date-overview">2021-Present</div>
-                            <div id="experience-content">
-                                
-                            </div>
+                    <div className="overview-title">Educational background</div>
+                    <div id="education-overview">
+                        <div id="date-overview">2017 - 2021</div>
+                        <div id="education-card">
+                            <div id="education-institution">Polytechnic University of Bucharest</div>
+                            <div id="education-degree">Automotive Engineering</div>
+                            
                         </div>
+                    </div>
+                    <div className="overview-title">Work Experience</div>
+                    <div id="experience-overview">
+                    
+                        <div id="experience-left">
+                            <div id="date-overview">2021 - Present</div>
+                            <div id="experience-company">HaynesPro</div>
+                        </div>
+
+                        <div id="experience-right">
+                            <div id="experience-title">Technical Writer</div>
+                            <div id="experience-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                               
+                        </div>
+                        
                     </div>
                 </div>
                 
