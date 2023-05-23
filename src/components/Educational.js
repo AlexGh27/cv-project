@@ -1,24 +1,80 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
 
 export default class Educational extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+      institution: '',
+      startDate: '',
+      endDate: ''
+    };
+  }
 
-    render() {
-        return(
-            <div>
-                <div className="field-title">Educational background</div>
-                <form className="form">
-                    <input type="text" id="education-title" placeholder="Education Title"/>
+  handleFieldChange = (e) => {
+    const fieldName = e.target.name;
+    const value = e.target.value;
+    this.setState({ [fieldName]: value });
+  };
 
-                    <input type="text" id="education-institution" placeholder="Institution"/>
+  handleAddEducation = () => {
+    const { title, institution, startDate, endDate } = this.state;
+    this.props.onAddEducation({ title, institution, startDate, endDate });
+    this.setState({
+      title: '',
+      institution: '',
+      startDate: '',
+      endDate: ''
+    });
+  };
 
-                    
-                    <input type="text" id="education-start" placeholder="Start Date" className="short-input"/>
+  render() {
+    const { title, institution, startDate, endDate } = this.state;
 
-                    <input type="text" id="education-end" placeholder="End Date" className="short-input"/>
-                    
-                    <button>ADD</button>
-                </form>
-            </div>
-        )
-    }
+    return (
+      <div className="form">
+        <h2>Educational Background</h2>
+
+        <input
+          type="text"
+          id="education-title"
+          name="title"
+          value={title}
+          onChange={this.handleFieldChange}
+          placeholder="Education Title"
+        />
+
+        <input
+          type="text"
+          id="education-institution"
+          name="institution"
+          value={institution}
+          onChange={this.handleFieldChange}
+          placeholder="Institution"
+        />
+
+        <input
+          type="text"
+          id="education-start"
+          name="start"
+          value={startDate}
+          onChange={this.handleFieldChange}
+          placeholder="Start Date"
+          className="short-input"
+        />
+        
+        <input
+          type="text"
+          id="education-end"
+          name="end"
+          value={endDate}
+          onChange={this.handleFieldChange}
+          placeholder="End Date"
+          className="short-input"
+        />
+
+        <button onClick={this.handleAddEducation}>Add Education</button>
+      </div>
+    );
+  }
 }

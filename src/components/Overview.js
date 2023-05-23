@@ -3,10 +3,13 @@ import React, {Component} from "react";
 export default class Overview extends Component {
 
     render() {
+
+        const { general, education, workExperience } = this.props;
+
         return(
             <div className="overview">
                 <div id="top-bar">
-                    <div id="name-overview">ALEXANDRU GHIOCA</div>
+                    <div id="name-overview">{general.firstName}</div>
                     <div id="contact">
                         <div id="phone-overview">+40 753 420 798</div>
                         <div id="mail-overview">alexghioca27@gmail.com</div>

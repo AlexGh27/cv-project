@@ -46,19 +46,24 @@ export default class App extends Component {
     const { general, education, experience } = this.state;
 
     return (
-      <div>
+      <div className="app">
         <Header/>
-        <General
-          general={general}
-          onGeneralInfoChange={this.handleGeneralInfoChange}
-        />
-        <Educational onAddEducation={this.handleAddEducation} />
-        <Experience onAddWorkExperience={this.handleAddWorkExperience} />
-        <Overview
-          generalInfo={this.state.generalInfo}
-          education={education}
-          experience={experience}
-        />
+        <div className="left-panel">
+          <General
+            general={general}
+            onGeneralInfoChange={this.handleGeneralInfoChange}
+          />
+          <Educational onAddEducation={this.handleAddEducation} />
+          <Experience onAddWorkExperience={this.handleAddWorkExperience} />
+        </div>
+        <div className="right-panel">
+          <Overview
+            general={general}
+            education={education}
+            experience={experience}
+          />
+        </div>
+        
         <Footer/>
       </div>
     );

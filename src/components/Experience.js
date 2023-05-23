@@ -1,27 +1,90 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
 
 export default class Experience extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      position: '',
+      company: '',
+      startDate: '',
+      endDate: '',
+      description: ''
+    };
+  }
 
-    render() {
-        return(
-            <div className="experience">
-                <div className="field-title">Work Experience</div>
+  handleFieldChange = (e) => {
+    const fieldName = e.target.name;
+    const value = e.target.value;
+    this.setState({ [fieldName]: value });
+  };
 
-                <form className="form">
-                    <input type="text" placeholder="Position"/>
+  handleAddWorkExperience = () => {
+    const { position, company, startDate, endDate, description } = this.state;
+    this.props.onAddWorkExperience({ position, company, startDate, endDate, description });
+    this.setState({
+      position: '',
+      company: '',
+      startDate: '',
+      endDate: '',
+      description: ''
+    });
+  };
 
-                    <input type="text" placeholder="Company"/>
+  render() {
+    const { position, company, startDate, endDate, description } = this.state;
 
-                    <input type="text" placeholder="Start Date" className="short-input"/>
+    return (
+      <div className="experience">
+        <h2>Work Experience</h2>
 
-                    <input type="text" placeholder="End Date" className="short-input"/>
+        <form className="form">
+            <input
+            type="text"
+            name="position"
+            value={position}
+            onChange={this.handleFieldChange}
+            placeholder="Position"
+            />
 
-                    <input type="text" placeholder="Description" className="big-input"/>
+            <input
+            type="text"
+            name="company"
+            value={company}
+            onChange={this.handleFieldChange}
+            placeholder="Company"
+            />
 
-                    <button>ADD</button>
-                </form>
-                
-            </div>
-        )
-    }
+            <input
+            type="text"
+            name="start"
+            value={startDate}
+            onChange={this.handleFieldChange}
+            placeholder="Start Date"
+            className="short-input"
+            />
+
+            <input
+            type="text"
+            name="end"
+            value={endDate}
+            onChange={this.handleFieldChange}
+            placeholder="End Date"
+            className="short-input"
+            />
+
+            <input
+            type="text"
+            name="description"
+            value={description}
+            onChange={this.handleFieldChange}
+            placeholder="Description"
+            className="big-input"
+            />
+        </form>
+        
+        
+        <button onClick={this.handleAddWorkExperience}>Add Work Experience</button>
+      </div>
+    );
+  }
 }
