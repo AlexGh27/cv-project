@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 
 export default class General extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      city: '',
+      description: ''
+    };
+  }
+
   handleFieldChange = (e) => {
     const fieldName = e.target.name;
     const value = e.target.value;
+    this.setState({ [fieldName]: value });
     this.props.onGeneralInfoChange(fieldName, value);
-  };
+  }
 
   render() {
-    const { firstName, lastName, email, phone, city, description } = this.state;
+    const { firstName, lastName, email, tel, city, summary } = this.state;
 
     return (
       <div className="general">
@@ -20,7 +33,7 @@ export default class General extends Component {
               id="firstName"          
               name="firstName"
               placeholder="First Name"
-              value={general.firstName || ''}
+              value={firstName}
               onChange={this.handleFieldChange}
             />
 
@@ -29,7 +42,7 @@ export default class General extends Component {
               id="lastName"
               name="lastName"
               placeholder="Last Name"
-              value={general.lastName}
+              value={lastName}
               onChange={this.handleFieldChange}
             />
 
@@ -38,7 +51,7 @@ export default class General extends Component {
               id="email"          
               name="email"          
               placeholder="Email Address"
-              value={general.email}
+              value={email}
               onChange={this.handleFieldChange}
             />
 
@@ -47,16 +60,25 @@ export default class General extends Component {
               id="tel"
               name="tel"
               placeholder="Phone Number"
-              value={general.tel}
+              value={tel}
               onChange={this.handleFieldChange}
               />
+
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="City"
+              value={city}
+              onChange={this.handleFieldChange}
+            />
 
             <input
               type="text"
               id="summary"
               name="summary"
               placeholder="Short Description"
-              value={general.summary}
+              value={summary}
               onChange={this.handleFieldChange}
             />
           </form>

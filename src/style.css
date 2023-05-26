@@ -106,9 +106,8 @@ input {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10vw;
-    
+    justify-content: space-between;
+    flex-wrap: nowrap;   
 }
 
 #content {

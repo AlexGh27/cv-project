@@ -26,7 +26,7 @@ export default class App extends Component {
 
   handleGeneralInfoChange = (fieldName, value) => {
     this.setState(prevState => ({
-      generalInfo: { ...prevState.generalInfo, [fieldName]: value }
+      general: { ...prevState.general, [fieldName]: value }
     }));
   };
 
