@@ -107,7 +107,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;   
+       
 }
 
 #content {
@@ -126,6 +126,11 @@ input {
 #name-overview {
     color: white;
     font-size: 35px;
+    margin-left: 15px;
+}
+
+#contact {
+    margin-right: 15px;
 }
 
 #description-overview {

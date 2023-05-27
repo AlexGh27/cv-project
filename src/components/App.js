@@ -19,8 +19,8 @@ export default class App extends Component {
         city: '',
         description: ''
       },
-      education: [],
-      workExperience: []
+      educational: [],
+      experience: []
     };
   }
 
@@ -30,20 +30,21 @@ export default class App extends Component {
     }));
   };
 
-  handleAddEducational = (education) => {
-    this.setState(prevState => ({
-      education: [...prevState.education, education]
+  handleAddEducational = (educational) => {
+    this.setState((prevState) => ({
+      educational: [...prevState.educational, educational]
     }));
   };
-
-  handleAddExperience = (workExperience) => {
-    this.setState(prevState => ({
-      workExperience: [...prevState.workExperience, workExperience]
+  
+  handleAddExperience = (experience) => {
+    this.setState((prevState) => ({
+      experience: [...prevState.experience, experience]
     }));
   };
+  
 
   render() {
-    const { general, education, experience } = this.state;
+    const { general, educational, experience } = this.state;
 
     return (
       <div className="app">
@@ -53,13 +54,13 @@ export default class App extends Component {
             general={general}
             onGeneralInfoChange={this.handleGeneralInfoChange}
           />
-          <Educational onAddEducation={this.handleAddEducation} />
-          <Experience onAddWorkExperience={this.handleAddWorkExperience} />
+          <Educational onAddEducational={this.handleAddEducational} />
+          <Experience onAddExperience={this.handleAddExperience} />
         </div>
         <div className="right-panel">
           <Overview
             general={general}
-            education={education}
+            educational={educational}
             experience={experience}
           />
         </div>

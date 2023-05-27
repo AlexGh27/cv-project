@@ -18,16 +18,16 @@ import React, { Component } from 'react';
     this.setState({ [fieldName]: value });
   };
 
-  handleAddWorkExperience = () => {
+  handleAddExperience = () => {
     const { position, company, startDate, endDate, description } = this.state;
-    const workExperience = {
+    const experience = {
       position,
       company,
       startDate,
       endDate,
       description
     };
-    this.props.onAddWorkExperience(workExperience);
+    this.props.onAddExperience(experience);
     this.setState({
       position: '',
       company: '',
@@ -78,7 +78,7 @@ import React, { Component } from 'react';
           onChange={this.handleFieldChange}
           placeholder="Description"
         />
-        <button onClick={this.handleAddWorkExperience}>Add Work Experience</button>
+        <button onClick={this.handleAddExperience}>Add Work Experience</button>
       </div>
     );
   }

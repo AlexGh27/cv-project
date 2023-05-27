@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 
 export default class Educational extends Component {
@@ -18,15 +17,15 @@ export default class Educational extends Component {
     this.setState({ [fieldName]: value });
   };
 
-  handleAddEducation = () => {
+  handleAddEducational = () => {
     const { title, institution, startDate, endDate } = this.state;
-    const education = {
+    const educational = {
       title,
       institution,
       startDate,
       endDate
     };
-    this.props.onAddEducation(education);
+    this.props.onAddEducational(educational);
     this.setState({
       title: '',
       institution: '',
@@ -69,7 +68,7 @@ export default class Educational extends Component {
           onChange={this.handleFieldChange}
           placeholder="End Date"
         />
-        <button onClick={this.handleAddEducation}>Add Education</button>
+        <button onClick={this.handleAddEducational}>Add Education</button>
       </div>
     );
   }

@@ -80,6 +80,7 @@ export default class General extends Component {
               placeholder="Short Description"
               value={summary}
               onChange={this.handleFieldChange}
+              className="big-input"
             />
           </form>
         
