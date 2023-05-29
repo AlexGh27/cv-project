@@ -37,6 +37,11 @@ import React, { Component } from 'react';
     });
   };
 
+  handleDelete = () => {
+    const { index, handleDeleteExperience } = this.props;
+    handleDeleteExperience(index);
+  };
+
   render() {
     const { position, company, startDate, endDate, description } = this.state;
 
@@ -79,6 +84,7 @@ import React, { Component } from 'react';
           placeholder="Description"
         />
         <button onClick={this.handleAddExperience}>Add Work Experience</button>
+        <button onClick={this.handleDelete}>UNDO</button>
       </div>
     );
   }

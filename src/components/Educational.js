@@ -34,6 +34,11 @@ export default class Educational extends Component {
     });
   };
 
+  handleDelete = () => {
+    const { index, handleDeleteEducational } = this.props;
+    handleDeleteEducational(index);
+  };
+
   render() {
     const { title, institution, startDate, endDate } = this.state;
 
@@ -69,6 +74,7 @@ export default class Educational extends Component {
           placeholder="End Date"
         />
         <button onClick={this.handleAddEducational}>Add Education</button>
+        <button onClick={this.handleDelete}>UNDO</button>
       </div>
     );
   }

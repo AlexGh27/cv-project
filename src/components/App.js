@@ -35,11 +35,27 @@ export default class App extends Component {
       educational: [...prevState.educational, educational]
     }));
   };
+
+  handleDeleteEducational = index => {
+    this.setState(prevState => {
+      const educational = [...prevState.educational];
+      educational.splice(index, 1);
+      return { educational };
+    });
+  };
   
   handleAddExperience = (experience) => {
     this.setState((prevState) => ({
       experience: [...prevState.experience, experience]
     }));
+  };
+
+  handleDeleteExperience = index => {
+    this.setState(prevState => {
+      const experience = [...prevState.experience];
+      experience.splice(index, 1);
+      return { experience };
+    });
   };
   
 
@@ -54,14 +70,18 @@ export default class App extends Component {
             general={general}
             onGeneralInfoChange={this.handleGeneralInfoChange}
           />
-          <Educational onAddEducational={this.handleAddEducational} />
-          <Experience onAddExperience={this.handleAddExperience} />
+          <Educational
+            onAddEducational={this.handleAddEducational}
+            handleDeleteEducational={this.handleDeleteEducational} />
+          <Experience 
+            onAddExperience={this.handleAddExperience}
+            handleDeleteExperience={this.handleDeleteExperience} />
         </div>
         <div className="right-panel">
           <Overview
             general={general}
             educational={educational}
-            experience={experience}
+            experience={experience}                      
           />
         </div>
         
