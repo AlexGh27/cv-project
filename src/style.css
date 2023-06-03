@@ -1,4 +1,3 @@
-
 body, html {
     margin: 0;
     width: 100%;
@@ -95,6 +94,7 @@ input {
     width: 40vw;
     margin-top: 5vh;
     border: 1px solid blue;
+    overflow-y: auto;
 }
 
 
@@ -112,6 +112,7 @@ input {
 
 #content {
     padding: 15px;
+    
 }
 
 .overview-title {
@@ -141,10 +142,18 @@ input {
     margin-bottom: 20px;
 }
 
+#summary-text {
+    width: 85%;
+    overflow-wrap: break-word;
+    margin-left: 2.5vw;
+}
+
 #education-overview {
     display: flex;
     justify-content: flex-start;
     gap: 3vw;
+    margin-bottom: 20px;
+    
 }
 
 #education-card {
@@ -152,17 +161,19 @@ input {
     padding-left: 1vw;
 }
 
-#experience-overview {
+.experience-overview {
     display: flex;
     justify-content: flex-start;
-    gap: 3vw;
-    height: 100px;
+    gap: 2vw;
+    height: auto;
 }
 
 #experience-left {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    align-items: center;
+    margin-left: 1.5vw;
 }
 
 #experience-right {
@@ -173,6 +184,50 @@ input {
 }
 
 #experience-content {
-    height: 80px;
+    height: auto;
+    width: 90%;
+    overflow-wrap: break-word;
+  }
+
+#summary-input,
+#description-input {
+    height: 100px;
+    width: 300px;
+    resize: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#summary-input::placeholder,
+#description-input::placeholder {
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+}
+
+input {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.education-box {
+    margin-bottom: 10px;
+    padding-left: 2vw;
+}
+#education-institution {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#education-degree {
+    font-size: 16px;
+}
+
+#experience-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#experience-company {
+    font-size: 16px;
 }
 

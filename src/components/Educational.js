@@ -44,7 +44,7 @@ export default class Educational extends Component {
 
     return (
       <div className="form">
-        <h2>Educational Background</h2>
+        <div className="field-title">Educational Background</div>
         <input
           type="text"
           name="title"

@@ -24,8 +24,7 @@ export default class Overview extends Component {
 
                     <div className="overview-title">Educational background</div>
                     {educational && educational.length > 0 && (
-                        <div>
-                            <div className="overview-title">Educational background</div>
+                        <div className="education-box">                   
                             {educational.map((item, index) => (
                                 <div id="education-overview" key={index}>
                                     <div id="date-overview">{item.startDate} - {item.endDate}</div>                                                    
@@ -40,10 +39,10 @@ export default class Overview extends Component {
 
                     <div className="overview-title">Work Experience</div>
                     {experience && experience.length > 0 && (
-                        <div>
+                        <div className="experience-box">
                             
                             {experience.map((item, index) => (
-                                <div id="experience-overview" key={index}>
+                                <div className="experience-overview" key={index}>
                                     <div id="experience-left">
                                         <div id="date-overview">{item.startDate} - {item.endDate}</div>                                      
                                         <div id="experience-company">{item.company}</div>

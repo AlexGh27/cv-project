@@ -47,7 +47,7 @@ import React, { Component } from 'react';
 
     return (
       <div className="form">
-        <h2>Work Experience</h2>
+        <div className="field-title">Work Experience</div>
         <input
           type="text"
           name="position"
@@ -76,12 +76,14 @@ import React, { Component } from 'react';
           onChange={this.handleFieldChange}
           placeholder="End Date"
         />
-        <input
+        <textarea
           type="text"
           name="description"
+          id="description-input"
           value={description}
           onChange={this.handleFieldChange}
           placeholder="Description"
+          maxLength="320"
         />
         <button onClick={this.handleAddExperience}>Add Work Experience</button>
         <button onClick={this.handleDelete}>UNDO</button>

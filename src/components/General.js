@@ -73,14 +73,14 @@ export default class General extends Component {
               onChange={this.handleFieldChange}
             />
 
-            <input
+            <textarea
               type="text"
-              id="summary"
+              id="summary-input"
               name="summary"
               placeholder="Short Description"
               value={summary}
               onChange={this.handleFieldChange}
-              className="big-input"
+              maxLength="320"
             />
           </form>
         
