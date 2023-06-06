@@ -7,9 +7,9 @@ export default class Overview extends Component {
         const { general, educational, experience } = this.props;
 
         return(
-            <div className="overview">
+            <div id="overview">
                 <div id="top-bar">
-                    <div id="name-overview">{general.firstName} {general. lastName}</div>
+                    <div id="name-overview">{general.firstName} {general.lastName}</div>
                     <div id="contact">
                         <div id="phone-overview">{general.tel}</div>
                         <div id="mail-overview">{general.email}</div>

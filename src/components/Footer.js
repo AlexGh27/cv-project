@@ -1,14 +1,26 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
+import html2canvas from 'html2canvas';
 
 export default class Footer extends Component {
+  captureScreenshot = () => {
+    const overviewElement = document.getElementById('overview'); 
 
-    render() {
-        return(
-            <div className="footer">
-                <button>Save as PDF</button>
-                <button>Reset</button>
-                <div>Created by AlexGh27</div>
-            </div>
-        )
-    }
+    html2canvas(overviewElement).then((canvas) => {
+      const screenshotUrl = canvas.toDataURL('image/png');     
+      const link = document.createElement('a');
+      link.href = screenshotUrl;
+      link.download = 'overview.png';       
+      link.click();
+    });
+  };
+
+  render() {
+    return (
+      <div className="footer">
+        <button onClick={this.captureScreenshot}>Save as Image</button>
+        <button>Reset</button>
+        <div>Created by AlexGh27</div>
+      </div>
+    );
+  }
 }
