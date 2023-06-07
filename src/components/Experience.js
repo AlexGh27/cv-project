@@ -46,47 +46,52 @@ import React, { Component } from 'react';
     const { position, company, startDate, endDate, description } = this.state;
 
     return (
-      <div className="form">
+      <div className="experience">
         <div className="field-title">Work Experience</div>
-        <input
-          type="text"
-          name="position"
-          value={position}
-          onChange={this.handleFieldChange}
-          placeholder="Position"
-        />
-        <input
-          type="text"
-          name="company"
-          value={company}
-          onChange={this.handleFieldChange}
-          placeholder="Company"
-        />
-        <input
-          type="text"
-          name="startDate"
-          value={startDate}
-          onChange={this.handleFieldChange}
-          placeholder="Start Date"
-        />
-        <input
-          type="text"
-          name="endDate"
-          value={endDate}
-          onChange={this.handleFieldChange}
-          placeholder="End Date"
-        />
-        <textarea
-          type="text"
-          name="description"
-          id="description-input"
-          value={description}
-          onChange={this.handleFieldChange}
-          placeholder="Description"
-          maxLength="320"
-        />
-        <button onClick={this.handleAddExperience}>Add Work Experience</button>
-        <button onClick={this.handleDelete}>UNDO</button>
+        <div className="form">     
+          <input
+            type="text"
+            name="position"
+            value={position}
+            onChange={this.handleFieldChange}
+            placeholder="Position"
+          />
+          <input
+            type="text"
+            name="company"
+            value={company}
+            onChange={this.handleFieldChange}
+            placeholder="Company"
+          />
+          <input
+            type="text"
+            name="startDate"
+            value={startDate}
+            onChange={this.handleFieldChange}
+            placeholder="Start Date"
+          />
+          <input
+            type="text"
+            name="endDate"
+            value={endDate}
+            onChange={this.handleFieldChange}
+            placeholder="End Date"
+          />
+          <textarea
+            type="text"
+            name="description"
+            id="description-input"
+            value={description}
+            onChange={this.handleFieldChange}
+            placeholder="Description"
+            maxLength="320"
+          />
+        </div>
+        <div className="buttons">
+          <button onClick={this.handleAddExperience}>Add Work Experience section</button>
+          <button onClick={this.handleDelete}>UNDO</button>
+        </div>
+        
       </div>
     );
   }

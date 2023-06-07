@@ -9,7 +9,7 @@ export default class Footer extends Component {
       const screenshotUrl = canvas.toDataURL('image/png');     
       const link = document.createElement('a');
       link.href = screenshotUrl;
-      link.download = 'overview.png';       
+      link.download = 'myResume.png';       
       link.click();
     });
   };
@@ -17,9 +17,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <button onClick={this.captureScreenshot}>Save as Image</button>
-        <button>Reset</button>
-        <div>Created by AlexGh27</div>
+        <button onClick={this.captureScreenshot}>Save as Image</button>              
       </div>
     );
   }

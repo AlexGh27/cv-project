@@ -35,6 +35,7 @@ export default class General extends Component {
               placeholder="First Name"
               value={firstName}
               onChange={this.handleFieldChange}
+              required
             />
 
             <input
@@ -44,6 +45,7 @@ export default class General extends Component {
               placeholder="Last Name"
               value={lastName}
               onChange={this.handleFieldChange}
+              required
             />
 
             <input
@@ -53,6 +55,7 @@ export default class General extends Component {
               placeholder="Email Address"
               value={email}
               onChange={this.handleFieldChange}
+              required
             />
 
             <input
@@ -62,6 +65,7 @@ export default class General extends Component {
               placeholder="Phone Number"
               value={tel}
               onChange={this.handleFieldChange}
+              required
               />
 
             <input
@@ -71,6 +75,7 @@ export default class General extends Component {
               placeholder="City"
               value={city}
               onChange={this.handleFieldChange}
+              required
             />
 
             <textarea
@@ -81,6 +86,7 @@ export default class General extends Component {
               value={summary}
               onChange={this.handleFieldChange}
               maxLength="320"
+              required
             />
           </form>
         

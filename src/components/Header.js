@@ -7,7 +7,7 @@ export default class Header extends Component {
         return(
             <div className="header">
                 <div className = "title">
-                    Create Your CV
+                    CREATE YOUR CV
                 </div>
                 <div className = "project">
                     A personal React project
