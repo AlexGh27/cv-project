@@ -7,11 +7,13 @@ export default class Header extends Component {
         return(
             <div className="header">
                 <div className = "title">
-                    CREATE YOUR CV
+                    
                 </div>
+                <img src="../assets/github.png" alt="Github logo" />
                 <div className = "project">
-                    A personal React project
+                    AlexGh27
                 </div>
+
             </div>
         )
     }
