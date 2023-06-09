@@ -6,6 +6,12 @@ body, html {
    
 }
 
+@font-face {
+    font-family: 'HeaderFont';
+    src: url('./assets/HeaderFont.ttf') format('truetype');
+  }
+  
+
 .app {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -31,10 +37,10 @@ body, html {
    grid-area: 1 / 1 / 2 / 3;
    height: 70px;
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
    gap: 31vw;
-   background-color: #414d58;
+   background-color: #314455;
    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -45,9 +51,16 @@ body, html {
 .project {
     color: white;
     font-size: 30px;
-    
+    margin-right: 2vw;
+    font-family: 'HeaderFont', Arial sans-serif;
 }
 
+.github {
+    color: white;
+    font-size: 30px;
+    margin-left: 2vw;
+    font-family: 'HeaderFont', Arial sans-serif;
+}
 .field-title {
     font-size: 25px;
     margin: 1vw;
@@ -70,7 +83,7 @@ textarea {
   border: 1px solid black;
   border-radius: 20px;
   padding: 8px;
-  background-color: transparent;
+  background-color: #C4DBF6;
   
 }
 
