@@ -17,7 +17,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <button onClick={this.captureScreenshot}>Save as Image</button>              
+        <button onClick={this.captureScreenshot} id="save-button">SAVE AS IMAGE</button>              
       </div>
     );
   }

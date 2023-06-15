@@ -7,8 +7,8 @@ export default class Header extends Component {
         
         return(
             <div className="header">  
-               <div className="github">My github</div>      
-               <div className = "project">
+               <a href="https://github.com/AlexGh27" className="github">My github</a>    
+                <div className = "project">
                      Created by AlexGh27
                 </div>
 
