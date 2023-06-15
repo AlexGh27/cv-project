@@ -1,13 +1,14 @@
 {
-  "main.css": "/cv-project/static/css/main.95c144e9.chunk.css",
-  "main.js": "/cv-project/static/js/main.5fee5142.chunk.js",
-  "main.js.map": "/cv-project/static/js/main.5fee5142.chunk.js.map",
-  "static/js/1.02228076.chunk.js": "/cv-project/static/js/1.02228076.chunk.js",
-  "static/js/1.02228076.chunk.js.map": "/cv-project/static/js/1.02228076.chunk.js.map",
+  "main.css": "/cv-project/static/css/main.7adb2c6e.chunk.css",
+  "main.js": "/cv-project/static/js/main.c042d320.chunk.js",
+  "main.js.map": "/cv-project/static/js/main.c042d320.chunk.js.map",
+  "static/js/1.11e1d3ce.chunk.js": "/cv-project/static/js/1.11e1d3ce.chunk.js",
+  "static/js/1.11e1d3ce.chunk.js.map": "/cv-project/static/js/1.11e1d3ce.chunk.js.map",
   "runtime~main.js": "/cv-project/static/js/runtime~main.191a181b.js",
   "runtime~main.js.map": "/cv-project/static/js/runtime~main.191a181b.js.map",
-  "static/css/main.95c144e9.chunk.css.map": "/cv-project/static/css/main.95c144e9.chunk.css.map",
+  "static/media/style.css": "/cv-project/static/media/HeaderFont.0b1946ea.ttf",
+  "static/css/main.7adb2c6e.chunk.css.map": "/cv-project/static/css/main.7adb2c6e.chunk.css.map",
   "index.html": "/cv-project/index.html",
-  "precache-manifest.fcbc2124d957df0e8e8964ea86502065.js": "/cv-project/precache-manifest.fcbc2124d957df0e8e8964ea86502065.js",
+  "precache-manifest.f6eb3f9f1aa177731f35b6fb1fc601c3.js": "/cv-project/precache-manifest.f6eb3f9f1aa177731f35b6fb1fc601c3.js",
   "service-worker.js": "/cv-project/service-worker.js"
 }
